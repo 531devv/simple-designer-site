@@ -1,0 +1,96 @@
+body {
+    display: grid;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    grid-template-columns: repeat(5, 1fr);
+    font-family: Gilroy;
+    font-weight: lighter;
+    font-size: 25px;
+    user-select: none;
+}
+
+.first {
+    display: grid;
+    grid-column: 1 / span 2;
+    background-color: #FE997C;
+}
+
+.second {
+    display: grid;
+    grid-column: 3 / span 3;
+    background-color: #080C0F;
+}
+
+/* Navigation */
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 28px;
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links i {
+    display: grid;
+}
+
+/* Images box */
+
+.img-box {
+    position: relative;
+}
+
+.img-box img{
+    position: absolute;
+    bottom: -10%;
+    right: -40%;
+}
+
+.img-box h1 {
+    position: absolute;
+    font-size: 130px;
+    color: white;
+    bottom: -2%;
+    right: 7%;
+    z-index: 1;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+/* Content navigation */
+
+.content-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+.content-nav a {
+    color: white;
+    font-size: 150px;
+    text-decoration: none;
+}
+
+/* Social icons */
+
+.icons-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.icons-box img {
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
