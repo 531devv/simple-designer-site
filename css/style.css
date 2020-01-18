@@ -1,96 +1,193 @@
-body {
-    display: grid;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    grid-template-columns: repeat(5, 1fr);
+}
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+body {
     font-family: Gilroy;
     font-weight: lighter;
-    font-size: 25px;
-    user-select: none;
-}
-
-.first {
-    display: grid;
-    grid-column: 1 / span 2;
-    background-color: #FE997C;
-}
-
-.second {
-    display: grid;
-    grid-column: 3 / span 3;
-    background-color: #080C0F;
+    font-size: 20px;
+    background: linear-gradient(90deg, #FE997C 50%, #080C0F 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Navigation */
 
-.nav-links {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding-top: 28px;
-    text-align: center;
-}
-
-.nav-links a {
-    text-decoration: none;
+.hamburger {
+    width: 30px;
     color: white;
+    margin: 15px 15px 0;
 }
 
-.nav-links i {
-    display: grid;
+.nav {
+    display: none;
 }
 
-/* Images box */
-
-.img-box {
-    position: relative;
-}
-
-.img-box img{
-    position: absolute;
-    bottom: -10%;
-    right: -40%;
-}
-
-.img-box h1 {
-    position: absolute;
-    font-size: 130px;
-    color: white;
-    bottom: -2%;
-    right: 7%;
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
     z-index: 1;
-    font-weight: lighter;
-    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
 }
 
-/* Content navigation */
+.mobile-nav a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-nav a:hover {
+    color: red;
+    transition: 0.4s;
+}
+
+.close {
+    position: absolute;
+    right: 22px;
+    top: 0;
+}
+
+#container {
+    transition: margin-left 0.7s;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Main content */
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.content img {
+    width: 80%;
+}
 
 .content-nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     flex-direction: column;
-    padding-top: 100px;
-    padding-left: 200px;
+    font-size: 1.2em;
+    align-items: center;
+    margin-left: 40px;
+    margin-bottom: 15px;
 }
 
 .content-nav a {
-    color: white;
-    font-size: 150px;
     text-decoration: none;
+    color: white;
 }
 
-/* Social icons */
-
-.icons-box {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
+.social-icons {
+    display: none;
 }
 
-.icons-box img {
-    padding-bottom: 10px;
-    padding-right: 20px;
+/* Media */
+
+@media(min-width: 600px){
+        .content-nav {
+        font-size: 2em;
+        margin-left: 70px;
+    }
+}
+
+@media(min-width: 768px){
+    .content img {
+        width: 65%;
+    }
+
+    .content-nav {
+        font-size: 2em;
+        margin-left: 70px;
+    }
+}
+
+@media(min-width: 1024px){
+    .slide {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5em;
+        padding-right: 5em;
+        padding-top: 1em;
+        width: 50%;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .content {
+        left: -5%;
+        bottom: -10%;
+    }
+
+    .content img {
+        width: 45%;
+    }
+
+    .content::after {
+        content: 'Projects';
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        font-size: 5em;
+        color: white;
+        padding-right: 300px;
+        text-transform: uppercase;
+    }
+
+    .content-nav {
+        width: auto;
+        position: fixed;
+        align-items: flex-end;
+        margin: 0;
+        bottom: 30%;
+        right: 15%;
+        font-size: 3.5em;
+    }
+
+    .social-icons {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding-right: 30px;
+        margin-bottom: 100px;
+    }
 }

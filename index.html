@@ -8,32 +8,42 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="first">
-            <nav>
-                <div class="nav-links">
-                    <a href="#">About</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Contact</a>
-                </div>
-            </nav>
-            <div class="img-box">
-                <h1>Projects</h1>
+        <nav id="nav">
+            <span class="slide">
+                <a href="#">
+                    <img src="./images/menu.svg" class="hamburger">
+                </a>
+            </span>
+            <div class="nav">
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+            <div id="menu" class="mobile-nav">
+                <a href="#" class="close">x</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <main>
+            <div class="content">
                 <img src="./images/one.png">
             </div>
-        </div>
-        <div class="second">
             <div class="content-nav">
-                <a href="#">first</a>
-                <a href="#">second</a>
+                <a href="#">one</a>
+                <a href="#">two</a>
                 <a href="#">three</a>
                 <a href="#">four</a>
             </div>
-            <div class="icons-box">
-                <img src="./images/Github_black.png">
+            <div class="social-icons">
                 <img src="./images/Instagram_black.png">
+                <img src="./images/Github_black.png">
                 <img src="./images/Snapchat_black.png">
             </div>
-        </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js "></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
