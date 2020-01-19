@@ -193,6 +193,10 @@ main {
 }
 
 @media(min-width: 1900px) {
+    .nav {
+        width: 35%;
+    }
+
     .content img {
         width: 32%;
     }
