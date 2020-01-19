@@ -14,10 +14,22 @@ body {
     font-family: Gilroy;
     font-weight: lighter;
     font-size: 20px;
-    background: linear-gradient(90deg, #FE997C 50%, #080C0F 50%);
+    background-color: #080C0F;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* Background Slider */
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #FE997C;
+    z-index: -1;
 }
 
 /* Navigation */
@@ -192,10 +204,13 @@ main {
     }
 }
 
-@media(min-width: 1900px) {
+@media(min-width: 1600px) {
     .nav {
         width: 35%;
     }
+}
+
+@media(min-width: 1900px) {
 
     .content img {
         width: 32%;

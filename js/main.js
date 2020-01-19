@@ -1,10 +1,24 @@
 (function(){
     const slide = document.querySelector(".hamburger");
     const closeSlide = document.querySelector('.close');
-    const img = document.querySelector('.content img');
-    const contentNav = document.querySelector('content-nav');
-    const tl = new TimelineMax();
-    tl.fromTo(img, 1, { height: "0%"}, {height: "80%", ease: Power2.ease });
+    const img = document.querySelector('.content-img');
+    const imgContent = document.querySelectorAll('.content');
+    const contentNav = document.querySelector('.content-nav');
+    const socialIcons = document.querySelector('.social-icons');
+    const background = document.querySelector('.slider');
+
+    const contentChanger = (color, image) => {
+        TweenMax.from(imgContent, 5, { y: 1000});
+        TweenMax.from(background, 5, { width: 0 })
+        TweenMax.to(background, 1, { backgroundColor: color,  ease:Power4.easeInOut });
+        TweenMax.to(img, 0.1, {attr:{src: image}});
+    }
+
+    TweenMax.from(document.body, 5, {opacity: 0})
+    TweenMax.from(contentNav, 5, { opacity: 0, x: 300});
+    TweenMax.from(img, 5, { y: 500 })
+    TweenMax.from(socialIcons, 5, { y: 300, opacity: 0 });
+    TweenMax.from(background, 5, { width: 0 });
 
     slide.addEventListener("click", () => {
         document.getElementById("menu").style.width = '250px';
@@ -15,5 +29,24 @@
         document.getElementsByClassName('slide')[0].style.opacity = '1';
         document.getElementById("menu").style.width = '0';
         document.getElementById("mobile-nav").style.marginLeft = '0';
+    });
+
+    document.body.addEventListener('click', (e) => {
+        if(e.target.matches('.content-nav-link')) {
+            switch(e.target.id){
+                case '1':
+                    contentChanger('#FE997C', '../images/one.png');
+                    break;
+                case '2':
+                    contentChanger('#352818', '../images/smoking-women.jpg');
+                    break;
+                case '3':
+                    contentChanger('#427D79', '../images/car.jpg');
+                    break;
+                case '4':
+                    contentChanger('#6D8245', '../images/male.jpg');
+                    break;
+            }
+        }
     });
 })();
