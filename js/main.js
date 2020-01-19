@@ -41,7 +41,7 @@
                     contentChanger('#352818', 'images/smoking-women.jpg');
                     break;
                 case '3':
-                    contentChanger('#427D79', 'images/car.jpg');
+                    contentChanger('#12a49d', 'images/door.jpg');
                     break;
                 case '4':
                     contentChanger('#6D8245', 'images/male.jpg');
