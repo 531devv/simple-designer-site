@@ -204,9 +204,21 @@ main {
     }
 }
 
+@media (min-width: 1280px) and (max-height: 600px){
+    .content img {
+        width: 24%;
+    }
+}
+
+@media(min-width: 1366px){
+    .content img {
+        width: 28%;
+    }
+}
+
 @media(min-width: 1600px) {
     .nav {
-        width: 35%;
+        width: 15%;
     }
 }
 
