@@ -50,7 +50,7 @@
                         contentChanger('#12a49d', 'images/door.jpg');
                         break;
                     case '4':
-                        contentChanger('#6D8245', 'images/male.jpg');
+                        contentChanger('#9b32c9', 'images/male.jpg');
                         break;
                 }
         }
