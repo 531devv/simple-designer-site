@@ -35,16 +35,16 @@
         if(e.target.matches('.content-nav-link')) {
             switch(e.target.id){
                 case '1':
-                    contentChanger('#FE997C', '../images/one.png');
+                    contentChanger('#FE997C', 'images/one.png');
                     break;
                 case '2':
-                    contentChanger('#352818', '../images/smoking-women.jpg');
+                    contentChanger('#352818', 'images/smoking-women.jpg');
                     break;
                 case '3':
-                    contentChanger('#427D79', '../images/car.jpg');
+                    contentChanger('#427D79', 'images/car.jpg');
                     break;
                 case '4':
-                    contentChanger('#6D8245', '../images/male.jpg');
+                    contentChanger('#6D8245', 'images/male.jpg');
                     break;
             }
         }
