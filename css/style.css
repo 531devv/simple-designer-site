@@ -150,11 +150,11 @@ main {
 
     .content {
         left: -5%;
-        bottom: -10%;
+        bottom: 0;
     }
 
     .content img {
-        width: 45%;
+        width: 35%;
     }
 
     .content::after {
@@ -189,5 +189,21 @@ main {
         right: 0;
         padding-right: 30px;
         margin-bottom: 100px;
+    }
+}
+
+@media(min-width: 1900px) {
+    .content img {
+        width: 32%;
+    }
+
+    .content-nav {
+        font-size: 7em;
+        right: 15%;
+        bottom: 20%;
+    }
+
+    .social-icons {
+        margin-bottom: 42px;
     }
 }
