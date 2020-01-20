@@ -201,6 +201,18 @@ main {
         right: 0;
         padding-right: 30px;
         margin-bottom: 100px;
+        cursor: pointer;
+    }
+
+    .social {
+        overflow: hidden;
+        transition-duration: 0.8s;
+        transition-property: transform;
+    }
+
+    .social:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
