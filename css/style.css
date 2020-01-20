@@ -216,6 +216,12 @@ main {
     }
 }
 
+@media(min-width: 1440px) {
+    .content img {
+        width: 40%;
+    }
+}
+
 @media(min-width: 1600px) {
     .nav {
         width: 35%;
